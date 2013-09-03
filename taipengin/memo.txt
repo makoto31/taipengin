@@ -14,3 +14,33 @@ jsCompiler整備
 
 
 http://localhost:8080/
+
+★環境構築メモ
+eclipse
+http://supportdoc.net/support-general/pleiades-mac.html
+
+Git plugin URL
+http://download.eclipse.org/releases/kepler
+　コラボレーション Eclipse GitHub Integration.....
+
+PyDev plugin URL
+http://download.eclipse.org/releases/kepler
+
+Aptana Plugin URL
+http://download.aptana.com/studio3/plugin/install
+
+Sass, comppassインストールしておくこと
+
+build.xmlの５行目、ruby.binのvalueは各PC環境に合わせて設定してください。
+
+★ビルド設定メモ（http://frmmpgit.blog.fc2.com/blog-entry-33.html）
+Ant Builderを用意して、build.xmlをEclipseから実行できるようにする。compass watchだとコンパイルで出来上がった*.cssファイルを再読込するためにRefreshを実行しなければいけないがAnt Builderであればコンパイル後に自動的にRefreshするように設定することができる。
+1.Project→Properties→Builders
+2.New→Ant Builder
+3.Name:欄に適当な名前を入力。例: compass
+4.Buildfile: は先ほど作成したbuild.xmlを指定
+5.Base Directory: はbuild.xmlのbasedirと同じ場所を指定
+6.Refreshのタブで『Refresh resources upon completioin.』にチェック。Refreshを行う範囲を選ぶ。私は面倒＆負荷を感じないので『The entire workspace』
+7.Targetsタブでは『After a "Clean":』と『Manual Build:』で実行するように設定(デフォルト)。『Auto Build:』を選ぶとやたらantが開始されてしまうのでセットしていない。『After a "Clean":』はBuild Automaticallyがチェックされていると呼ばれないようである。
+8.Ctrl+BもしくはProject→Build Allでantが起動する(Console Viewに結果が表示される)。
+

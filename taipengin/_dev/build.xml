@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<project name="webproject" default="compass" basedir=".">
+    
+    <property name="ruby.bin" value="/usr/bin" />
+    
+    <target name="compass">
+        <exec executable="${ruby.bin}/ruby" dir=".">
+            <arg value="${ruby.bin}/compass" />
+            <arg value="compile" />
+        </exec>
+    </target>
+</project>
