@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<project name="webproject" default="compass" basedir=".">
+<project name="webproject" default="build" basedir=".">
     
-    <property name="ruby.bin" value="/usr/bin" />
+	<!-- 環境設定パス -->
+    <property name="ruby.bin" value="/usr/bin/ruby" />
+    <property name="compass.bin" value="/usr/bin/compass" />
+    <property name="java.bin" value="/usr/bin/java" />
+    <property name="closure.bin" value="./closure.jar" />
+    <property name="jsbuilder.bin" value="./jsbuilder.jar" />
     
-    <target name="compass">
-        <exec executable="${ruby.bin}/ruby" dir=".">
-            <arg value="${ruby.bin}/compass" />
+    <target name="build">
+        <!-- compass実行 -->
+        <exec executable="${ruby.bin}" dir=".">
+            <arg value="${compass.bin}" />
             <arg value="compile" />
+        </exec>
+    	
+        <!-- closure実行 -->
+        <exec executable="${java.bin}" dir=".">
+            <arg value="-jar" />
+            <arg value="${jsbuilder.bin}" />
         </exec>
     </target>
 </project>
