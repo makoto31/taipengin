@@ -1,3 +1,9 @@
+■eclipse github
+
+Sass整備
+jsCompiler整備
+モバイルコンパイル
+
 セッション機能
 データベース機能
 認証機能
@@ -5,10 +11,6 @@
 メール機能
 
 
-http://localhost:8080/
 
-gitHub
-Sass
-js
-モバイルコンパイル
-eclipse github
+
+http://localhost:8080/
