@@ -1,0 +1,1 @@
+var hoge=$("<div/>").addClass("cs-test").text("test&test");$("#id-content-body").append(test);var test=$("<div/>").addClass("cs-test").text("test&test");$("#id-content-body").append(test);var fuga=$("<div/>").addClass("cs-test").text("test&test");$("#id-content-body").append(test);

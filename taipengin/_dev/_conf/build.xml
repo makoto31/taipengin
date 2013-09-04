@@ -2,12 +2,15 @@
 
 <project name="webproject" default="build" basedir=".">
     
-	<!-- 環境設定パス -->
+	<!-- 環境パス -->
     <property name="ruby.bin" value="/usr/bin/ruby" />
     <property name="compass.bin" value="/usr/bin/compass" />
     <property name="java.bin" value="/usr/bin/java" />
-    <property name="closure.bin" value="./closure.jar" />
+    <!-- jar, 出力js, 入力jsパス -->
+    <property name="closure.bin" value="./compiler.jar" />
     <property name="jsbuilder.bin" value="./jsbuilder.jar" />
+    <property name="js.out" value="../../static/js/app.js" />
+    <property name="js.in" value="../js" />
     
     <target name="build">
         <!-- compass実行 -->
@@ -20,6 +23,10 @@
         <exec executable="${java.bin}" dir=".">
             <arg value="-jar" />
             <arg value="${jsbuilder.bin}" />
+            <arg value="-java:${java.bin}" />
+            <arg value="-closure:${closure.bin}" />
+            <arg value="-out:${js.out}" />
+            <arg value="-dir:${js.in}" />
         </exec>
     </target>
 </project>
