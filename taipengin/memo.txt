@@ -1,9 +1,8 @@
-■eclipse github
+#eclipse github
+#Sass整備
+#jsCompiler整備
 
-Sass整備
-jsCompiler整備
 モバイルコンパイル
-
 セッション機能
 データベース機能
 認証機能
@@ -29,9 +28,9 @@ http://download.eclipse.org/releases/kepler
 Aptana Plugin URL
 http://download.aptana.com/studio3/plugin/install
 
-Sass, comppassインストールしておくこと
+★Sass, comppassインストールしておくこと
 
-build.xmlの５行目、ruby.binのvalueは各PC環境に合わせて設定してください。
+★build.xmlの環境パスは各PC環境に合わせて設定してください。
 
 ★ビルド設定メモ（http://frmmpgit.blog.fc2.com/blog-entry-33.html）
 Ant Builderを用意して、build.xmlをEclipseから実行できるようにする。compass watchだとコンパイルで出来上がった*.cssファイルを再読込するためにRefreshを実行しなければいけないがAnt Builderであればコンパイル後に自動的にRefreshするように設定することができる。

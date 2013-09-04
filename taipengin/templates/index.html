@@ -2,12 +2,12 @@
 <head>
 	<meta charset='UTF-8'>
 	<title>俺のサイト</title>
-	<link rel="stylesheet" href='/static/css/test.css' />
+	<link rel="stylesheet" href='/static/css/screen.css' />
 </head>
 <body>
 	<div class='cs-header'>
 		<div class='cs-header-title'>俺のサイト</div>
-		<div class='cs-header-logo'>LOGO</div>
+		<div id='id-logo' class='cs-header-logo'>LOGO</div>
 	</div>
 	<div class='cs-content'>
 		<div class='cs-content-inner'>
@@ -17,9 +17,9 @@
 		<div class='cs-side'>
 			<div class='cs-side-inner'>
 				<ul class='cs-side-ul'>
-					<li class='cs-side-li'><a href='http://google.co.jp'>link</a></li>
-					<li class='cs-side-li'><a href='http://google.co.jp'>link</a></li>
-					<li class='cs-side-li'><a href='http://google.co.jp'>link</a></li>
+					<li id='id-link1' class='cs-side-li'><a href='http://google.co.jp'>link</a></li>
+					<li id='id-link2' class='cs-side-li'><a href='http://google.co.jp'>link</a></li>
+					<li id='id-link3' class='cs-side-li'><a href='http://google.co.jp'>link</a></li>
 				</ul>
 			</div>
 		</div>
@@ -28,7 +28,8 @@
 	<div class='cs-footer'>フッター</div>
 	
 	<script type='text/javascript' src='/static/libs/jquery-2.0.3.min.js'></script>
-	<script type='text/javascript' src='/static/js/test.js'></script>
+    <script type='text/javascript' src='/static/libs/underscore-min.js'></script>
+	<script type='text/javascript' src='/static/js/app.js'></script>
 	
 </body>
 </html>
