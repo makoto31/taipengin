@@ -4,9 +4,11 @@ onButton = function(aThis, aFunc){
 	
 	var ret = null;
 	
+	// タッチデバイス
 	if(Util.isTouchDevice()){
 		ret = {touchend: Util.onClickTouch(aFunc), touchstart: Hover.onTouchstart};
 		
+	// PC用
 	}else{
 		ret = {click: aFunc, mouseenter: Hover.onMouseenter, mouseleave: Hover.onMouseleave};
 	}
@@ -50,13 +52,15 @@ $(document).ready(function(){
 	
 	// リンク
 	onButton($('#id-link1'), function(){
-		console.log('hoge!-1');
+		location.href = 'http://images.apple.com/media/jp/iphone-5c/2013/10ba527a-1a10-3f70-aae814f8/feature/iphone5c-feature-jp-20130910_848x480.mp4';
 	});
 	onButton($('#id-link2'), function(){
 		console.log('hoge!-2');
+		location.href = 'http://google.co.jp';
 	});
 	onButton($('#id-link3'), function(){
 		console.log('hoge!-3');
+		location.href = 'http://google.co.jp';
 	});
 	
 	// イベントをオフにする例

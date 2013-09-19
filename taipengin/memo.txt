@@ -3,6 +3,7 @@
 #jsCompiler整備
 
 モバイルコンパイル
+ ▶init.jsのready()のonButton処理をindex.htmlのscriptにベタ書きする
 セッション機能
 データベース機能
 認証機能

@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+@media only screen and (max-width: 650px) {
+
+.cs-content-inner{
+  float:none;
+}
+
+.cs-content-body{
+  margin: 0;
+  min-height: 0;
+}
+
+.cs-side{
+  float:none;
+  margin-left: 0;
+  width: 100%;
+}
+
+.cs-side-inner{
+  min-height: 0;
+}
+
+
+}

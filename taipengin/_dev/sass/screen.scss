@@ -6,6 +6,14 @@
 @charset "utf-8";
 @import "compass/reset";
 
+@mixin css($property, $value) {
+     @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+          #{$prefix}#{$property}: $value;
+     }
+}
+
+
+
 /** 基本レイアウト */
 body{
   margin: 0;
@@ -40,9 +48,7 @@ a:visited{
   width: 100%;
   color: #FFF;
   
-  box-shadow: 0 0 2px rgba(255, 255, 255, .25);
-  -webkit-box-shadow: 0 0 2px rgba(255, 255, 255, .25);
-  -moz-box-shadow: 0 0 2px rgba(255, 255, 255, .25);
+  @include css(box-shadow, 0 0 2px rgba(255, 255, 255, .25));
 }
 
 .cs-header-logo{
@@ -89,16 +95,15 @@ a:visited{
   float:left;
   margin-left: -100%;
   width: 14em;
-  padding: 1em;
+  padding: 1em 0 1em 0;
   background-color: #2ecc71;
 }
 
 .cs-side-inner{
+  margin: 0 1em 0 1em;
   min-height: 1000px;
   border-radius: 2px;
-  box-shadow: 0 0 2px rgba(0, 0, 0, .25);
-  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, .25);
-  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, .25);
+  @include css(box-shadow, 0 0 2px rgba(0, 0, 0, .25));
 }
 
 .cs-side-ul{
@@ -107,7 +112,9 @@ a:visited{
 
 .cs-side-li{
   list-style-type: none;
+  color: #FFF;
   &.hover{
+    color: #3498db;
     background-color: #FFF;
     a:link{
       color: #3498db;
@@ -132,4 +139,7 @@ a:visited{
 /** コンテンツ */
 .cs-test{
 }
+
+// スマホCSS
+@import "_sp"
 
