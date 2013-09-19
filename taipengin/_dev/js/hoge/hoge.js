@@ -5,3 +5,9 @@ var fuga = $('<div/>').addClass('cs-test').html([
                                                  ,'</video>'
                                                  ].join());
 $('#id-content-body').append(fuga);
+
+var input = $('<input type="text"/>').css({
+										'width': '100%'
+										});
+
+$('#id-content-body').append(input);
