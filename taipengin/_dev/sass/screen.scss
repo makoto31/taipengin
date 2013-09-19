@@ -12,16 +12,25 @@
      }
 }
 
-
+$base-color: #3498db;
 
 /** 基本レイアウト */
+html{
+  height: 100%;
+}
 body{
+  height: 100%;
+  overflow-y: scroll;
   margin: 0;
   font: 14px/21px "Lucida Grande", "Lucida Sans Unicode", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Helvetica, Arial, Verdana, sans-serif;
-  background-color: #3498db;
+  background-color: #FFF;
   @include css(user-select, none);
 }
-
+#id-main{
+  position: relative;
+  min-height: 100%;
+  overflow-y: hidden;
+}
 
 /** 共通部 */
 .cs-clear{
@@ -48,7 +57,7 @@ a:visited{
   padding: .6em 0;
   width: 100%;
   color: #FFF;
-  
+  background-color: $base-color;
   @include css(box-shadow, 0 0 2px rgba(255, 255, 255, .25));
 }
 
@@ -76,33 +85,25 @@ a:visited{
 
 /** コンテンツ */
 .cs-content{
-  width: 100%;
-  background-color: #FFF;
-}
-
-.cs-content-inner{
-  float:left;
-  width: 100%;
+  float:right;
+  width: 78%;
 }
 
 .cs-content-body{
-  background-color: #FFF;
-  margin: 0 0 0 16em;
-  min-height: 1000px;
 }
 
 /** サイトバー */
 .cs-side{
   float:left;
-  margin-left: -100%;
-  width: 14em;
-  padding: 1em 0 1em 0;
+  width: 20%;
+  height: 100%;
+  padding-bottom: 32767px;
+  margin-bottom: -32802px;
   background-color: #2ecc71;
 }
 
 .cs-side-inner{
-  margin: 0 1em 0 1em;
-  min-height: 1000px;
+  margin: 1em 1em 0 1em;
   border-radius: 2px;
   @include css(box-shadow, 0 0 2px rgba(0, 0, 0, .25));
 }
@@ -128,11 +129,13 @@ a:visited{
 
 /** フッター */
 .cs-footer{
-  line-height: 2.5em;
-  height: 2.5em;
+  position: absolute;
+  bottom: 0;
+  line-height: 35px;
+  height: 35px;
   width: 100%;
   color: #FFF;
-  
+  background-color: $base-color;
   text-align: center;
 }
 
