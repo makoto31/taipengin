@@ -2,6 +2,8 @@
 #Sass整備
 #jsCompiler整備
 
+python -> golangに変更
+wbs, 進捗, カットオーバー, 見積もり, 実績稼働, 会社, プロジェクト, 個人フィルタ管理
 モバイルコンパイル
  ▶init.jsのready()のonButton処理をindex.htmlのscriptにベタ書きする
 セッション機能
