@@ -15,14 +15,4 @@ Util = {
 		return ret;
 	}
 	
-	// タッチイベント
-	,onClickTouch: function(aFunc){
-		return function(){
-			// ハイライトしてたら実行
-			if($(this).hasClass('hover')){
-				aFunc.apply(this);
-			}
-		};
-	}
-	
 };

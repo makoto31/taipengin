@@ -17,10 +17,14 @@ Hover = {
 		$('.hover').removeClass('hover');
 	}
 	// タッチ終了イベント
-	,onTouchend: function(){
-		_.delay(function(){
-			$('.hover').removeClass('hover');
-		}, Def.TimeTouchEnd);
+	,onTouchend: function(aFunc){
+		return function(){
+			// ハイライトしてたら実行
+			if($(this).hasClass('hover')){
+				aFunc.apply(this);
+				$(this).removeClass('hover');
+			}
+		};
 	}
 };
 

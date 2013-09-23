@@ -6,7 +6,7 @@ onButton = function(aThis, aFunc){
 	
 	// タッチデバイス
 	if(Util.isTouchDevice()){
-		ret = {touchend: Util.onClickTouch(aFunc), touchstart: Hover.onTouchstart};
+		ret = {touchstart: Hover.onTouchstart, touchend: Hover.onTouchend(aFunc)};
 		
 	// PC用
 	}else{
@@ -36,7 +36,6 @@ $(document).ready(function(){
 	// タッチデバイス
 	if(Util.isTouchDevice()){
 		// hover解除処理登録
-		$(document).on({touchend: Hover.onTouchend});
 		$(document).on({touchmove: _.throttle(Hover.onTouchmove, Def.TimeTouchMove)});
 	}
 	
